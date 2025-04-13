@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pause - Cosmic Screen Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-content">
+        <h1>Pause</h1>
+        <p>Screen Time: <span id="screen-time">0</span> seconds</p>
+        <div class="setting">
+            <label for="time-limit">Time Limit (seconds):</label>
+            <input type="number" id="time-limit" min="1" value="600">
+        </div>
+        <a href="settings.html" class="button">Go to Space Station (Settings)</a>
+    </div>
+
+    <div id="lockout-overlay" class="hidden">
+        <div class="lockout-content">
+            <h2>Orbiting Break Mode!</h2>
+            <p>Resets at midnight. Time remaining: <span id="time-remaining">00:00:00</span></p>
+            <p id="unlock-countdown" class="hidden">Re-entering Orbit in: <span id="countdown-seconds">10</span> seconds</p>
+            <button id="unlock-button">Re-Enter Orbit Early</button>
+            <a href="settings.html" class="button">Go to Space Station (Settings)</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
